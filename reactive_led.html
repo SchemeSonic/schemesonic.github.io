@@ -140,7 +140,7 @@
 
                                                 <div class="vertical-timeline-block">
                                                     <div class="vertical-timeline-icon blue-bg">
-                                                        <i class="fa fa-file-text"></i>
+                                                        <i class="fa fa-puzzle-piece"></i>
                                                     </div>
 
                                                     <div class="vertical-timeline-content">
@@ -159,9 +159,27 @@
                                                     </div>
 
                                                     <div class="vertical-timeline-content">
-                                                        <h2>Coffee Break</h2>
-                                                        <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                                                        <a href="#" class="btn btn-sm btn-info">Read more</a>
+                                                        <h2>Arduino Code</h2>
+                                                        <textarea id="code1">
+                                                            <script>
+                                                                // Code goes here
+
+                                                                // For demo purpose - animation css script
+                                                                function animationHover(element, animation){
+                                                                    element = $(element);
+                                                                    element.hover(
+                                                                            function(){
+                                                                                element.addClass('animated ' + animation);
+                                                                            },
+                                                                            function(){
+                                                                                //wait for animation to finish before removing classes
+                                                                                window.setTimeout( function(){
+                                                                                    element.removeClass('animated ' + animation);
+                                                                                }, 2000);
+                                                                            });
+                                                                }
+                                                            </script>
+                                                        </textarea>
                                                         <span class="vertical-date"> Step-3 </span>
                                                     </div>
                                                 </div>
