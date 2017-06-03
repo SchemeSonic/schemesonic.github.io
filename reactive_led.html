@@ -281,6 +281,19 @@
     <script src="js/plugins/pace/pace.min.js"></script>
 
     <script>
+         $(document).ready(function(){
+
+             var editor_one = CodeMirror.fromTextArea(document.getElementById("code1"), {
+                 lineNumbers: true,
+                 matchBrackets: true,
+                 styleActiveLine: true,
+                 theme:"ambiance"
+             });
+
+        });
+    </script>
+
+    <script>
         $(document).ready(function(){
 
             $('#loading-example-btn').click(function () {
