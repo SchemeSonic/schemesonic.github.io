@@ -1,0 +1,23 @@
+.rippleAnimation:hover {
+  --ripple-color: rgb(255, 255, 255, 0.1);
+  animation: ripple 2s linear infinite;
+  cursor: none;
+}
+
+:global(.light) .rippleAnimation:hover {
+  --ripple-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0rem var(--ripple-color),
+      0 0 0 0rem var(--ripple-color),
+      0 0 0 0rem var(--ripple-color);
+  }
+
+  100% {
+    box-shadow: 0 0 0 .1rem var(--ripple-color),
+      0 0 0 .3rem var(--ripple-color),
+      0 0 0 .5rem var(--ripple-color);
+  }
+}
