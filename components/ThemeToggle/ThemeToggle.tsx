@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import * as styles from "./ThemeToggle.module.css";
-//TODO: fix css module typing error
+import styles from "./ThemeToggle.module.css";
+
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -48,7 +48,7 @@ const ThemeToggle = () => {
 
   return (
     <div id="theme-toggle">
-      <div className="flex justify-center items-center mt-3">
+      <div className="flex">
         {lightIcon}
         <div
           className={`w-12 h-5 flex items-center rounded-full mx-1 px-1 cursor-pointer ${
@@ -57,8 +57,8 @@ const ThemeToggle = () => {
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           <div
-            className={`bg-white w-4 h-4 rounded-full shadow-md transform transition duration-300 ease ${
-              theme === "dark" && "translate-x-6"
+            className={`w-4 h-4 rounded-full shadow-md transform transition duration-300 ease ${
+              theme === "dark" ? "translate-x-6 bg-purple-400" : "bg-yellow-200"
             }`}
           ></div>
         </div>
