@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-
+//TODO: Add mobile support
 const Header = () => {
   const [showScheme, setShowScheme] = useState(false);
   const [showSonic, setShowSonic] = useState(false);
