@@ -22,7 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex flex-row-reverse items-center relative px-4 py-4 border-b border-opacity-100 dark:border-opacity-30">
+    <div className="flex flex-row-reverse items-center relative px-4 py-4 mb-3 border-b border-opacity-100 dark:border-opacity-30">
       <span className="absolute left-4">
         <RoughNotation
           type="highlight"

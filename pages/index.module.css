@@ -1,0 +1,45 @@
+.projects table {
+    font-family: monospace;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.projects table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.projects table td,
+.projects table th {
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    padding: 8px;
+}
+
+.projects table tr:hover {
+    background-color: rgba(221, 221, 221, 0.5);
+}
+
+.projects table thead tr th:first-child {
+    border-right: 0;
+}
+
+.projects table thead tr th:nth-child(2) {
+    border-left: 0;
+}
+
+.projects table tbody tr td:first-child {
+    text-align: center;
+    border-right: none;
+}
+
+.projects table tbody tr td:nth-child(2) {
+    border-left: none;
+}
+
+.projects table tbody a {
+    font-weight: 600;
+    color: blue;
+}

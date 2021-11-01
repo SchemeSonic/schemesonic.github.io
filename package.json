@@ -10,6 +10,7 @@
     "open-browser": "open http://localhost:6999"
   },
   "dependencies": {
+    "@next/mdx": "^12.0.2",
     "howler": "^2.2.3",
     "next": "12.0.1",
     "next-themes": "0.0.15",
@@ -18,6 +19,7 @@
     "react-rough-notation": "^1.0.1"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^1.6.22",
     "@types/howler": "^2.2.4",
     "@types/node": "16.11.6",
     "@types/react": "17.0.33",

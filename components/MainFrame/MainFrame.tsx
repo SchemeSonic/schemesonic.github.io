@@ -9,7 +9,7 @@ interface IMainFrame {
   };
 }
 
-const MainFrame = ({ meta }: IMainFrame) => {
+const MainFrame = ({ meta, children }: React.PropsWithChildren<IMainFrame>) => {
   meta = { ...{ title: "SchemeSonic", desc: "Portfolio" }, ...meta };
 
   return (
@@ -21,9 +21,7 @@ const MainFrame = ({ meta }: IMainFrame) => {
       </Head>
       <div className="container mx-auto px-4">
         <Header />
-        <div className="mt-3">
-            This is going to be body
-        </div>
+        <div id="main-content">{children}</div>
       </div>
     </div>
   );
