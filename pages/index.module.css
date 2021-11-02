@@ -1,3 +1,69 @@
+/****** Avatar ******/
+.avatarWrapper {
+    position: relative;
+}
+
+.avatarWrapper img[alt="avatar"] {
+    padding: 10px !important;
+    box-shadow: inset 10px -10px 60px red;
+}
+
+:global(.dark) .avatarWrapper img[alt="avatar"] {
+    box-shadow: inset 10px -10px 60px rgba(167, 139, 250, 1);
+}
+
+.mouth {
+    display: none;
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    top: 72%;
+    left: calc((100% - 44px) / 2);
+    z-index: 1;
+}
+
+:global(.dark) .mouth {
+    display: block;
+}
+
+.leftFang,
+.rightFang {
+    position: absolute;
+    top: 10%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 15px solid #fff;
+}
+
+.leftFang {
+    left: 10%;
+}
+
+.rightFang {
+    left: 65%;
+}
+
+.leftBlood,
+.rightBlood {
+    position: absolute;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid red;
+}
+
+.leftBlood {
+    top: 45%;
+    left: 16%;
+}
+
+.rightBlood {
+    top: 45%;
+    left: 70%;
+}
+
+
+/******* Projects *******/
+
 .projects table {
     font-family: monospace;
     border-collapse: collapse;
@@ -12,14 +78,31 @@
     background-color: #f2f2f2;
 }
 
+:global(.dark) .projects table th {
+    background-color: #212121;
+}
+
 .projects table td,
 .projects table th {
-    border: 1px solid rgba(221, 221, 221, 0.5);
+    border: 1px solid #ececec;
     padding: 8px;
 }
 
-.projects table tr:hover {
-    background-color: rgba(221, 221, 221, 0.5);
+.projects table th {
+    border: none;
+}
+
+.projects table th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.projects table th:last-child {
+    border-top-right-radius: 5px;
+}
+
+:global(.dark) .projects table td,
+:global(.dark) .projects table th {
+    border-color: #1b1d25;
 }
 
 .projects table thead tr th:first-child {

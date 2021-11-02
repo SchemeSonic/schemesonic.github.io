@@ -1,10 +1,29 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { Howl } from "howler";
 import styles from "./ThemeToggle.module.css";
+const lightSound = new Howl({
+  src: [require(`../../public/sounds/rooster.mp3`)],
+});
+const nightSound = new Howl({
+  src: [require(`../../public/sounds/zombie.mp3`)],
+});
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  const onThemeChanged = (prevTheme: string) => {
+    if (prevTheme === "light") {
+      setTheme("dark");
+      lightSound.stop();
+      nightSound.play();
+    } else {
+      setTheme("light");
+      lightSound.play();
+      nightSound.stop();
+    }
+  };
 
   const lightIcon = (
     <svg
@@ -54,7 +73,7 @@ const ThemeToggle = () => {
           className={`w-12 h-5 flex items-center rounded-full mx-1 px-1 cursor-pointer ${
             theme === "light" ? "bg-gray-300" : "bg-gray-700"
           }`}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          onClick={() => onThemeChanged(theme as string)}
         >
           <div
             className={`w-4 h-4 rounded-full shadow-md transform transition duration-300 ease ${
