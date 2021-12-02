@@ -1,5 +1,24 @@
+import Image from "next/image";
+
+export const ProjectTitle = () => (
+  <div className="my-5 mb-5 flex items-center text-lg">
+    <Image
+      alt="projects"
+      src={require("../../../public/images/sword.png")}
+      width={32}
+      height={32}
+    />
+    <span className="ml-2">Projects</span>
+  </div>
+);
+
+<ProjectTitle />
+
+<div className="overflow-x-auto">
+
 |     | date      | name                        | description                                                                            | tags                            | repo                                                            | site                                                                |
 | --- | --------- | --------------------------- | -------------------------------------------------------------------------------------- | ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------- |
 | ℹ️  | Nov, 2021 | schemesonic.com             | Personal website                                                                       | Next.js, tailwind               | [link](https://github.com/SchemeSonic/schemesonic.github.io)    | [link](https://www.schemesonic.com)                                 |
 | 📍  | Dec, 2020 | react-osm-geocoding         | Find address locations via OSM Nominatim                                               | react, osm                      | [link](https://github.com/Paraboly/react-osm-geocoding)         | [link](https://www.npmjs.com/package/@paraboly/react-osm-geocoding) |
 | 📌  | Jul, 2020 | pwc-leaflet-entity-selector | Get entities within the drawn boundary. Web component written in StencilJS for Leaflet | web component, stencil, leaflet | [link](https://github.com/Paraboly/pwc-leaflet-entity-selector) | [link](https://paraboly.github.io/pwc-leaflet-entity-selector/)     |
+</div>
