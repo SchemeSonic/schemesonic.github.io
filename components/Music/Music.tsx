@@ -1,13 +1,12 @@
 import React from "react";
-import Image from "next/image";
 
 const Music = () => {
   return (
     <div>
       <div className="my-5 mb-5 flex items-center text-lg">
-        <Image
+        <img
           alt="music"
-          src={require("../../public/images/music.gif")}
+          src={require("../../public/images/music.gif").default.src}
           width={32}
           height={32}
         />

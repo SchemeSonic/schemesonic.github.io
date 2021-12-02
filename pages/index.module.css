@@ -6,6 +6,7 @@
 .avatarWrapper img[alt="avatar"] {
     padding: 10px !important;
     box-shadow: inset 10px -10px 60px red;
+    display: inline-block;
 }
 
 :global(.dark) .avatarWrapper img[alt="avatar"] {

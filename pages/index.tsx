@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import React from "react";
 import MainFrame from "../components/MainFrame/MainFrame";
 import Projects from "../components/Markdown/Projects/Projects.mdx";
@@ -15,10 +14,10 @@ const Home: NextPage = () => {
         <div className={styles.rightFang}></div>
         <div className={styles.rightBlood}></div>
       </div>
-      <Image
+      <img
         className="rounded-full"
         alt="avatar"
-        src={require("../public/images/avatar.png")}
+        src={require("../public/images/avatar.png").default.src}
         width={256}
         height={256}
       />
