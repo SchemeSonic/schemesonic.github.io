@@ -6,6 +6,7 @@
     "dev": "npm run open-browser && next dev -p 6999",
     "build": "next build",
     "start": "npm run open-browser && next start -p 6999",
+    "export": "next export",
     "lint": "next lint",
     "open-browser": "open http://localhost:6999"
   },
