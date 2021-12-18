@@ -11,7 +11,7 @@ const nightSound = new Howl({
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const onThemeChanged = (prevTheme: string) => {
     if (prevTheme === "light") {
@@ -28,7 +28,7 @@ const ThemeToggle = () => {
   const lightIcon = (
     <svg
       className={`h-5 w-5 rounded-full text-gray-${
-        theme === "light" ? 600 : 400
+        resolvedTheme === "light" ? 600 : 400
       } ${(styles as any).rippleAnimation}`}
       fill="none"
       viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const ThemeToggle = () => {
   const darkIcon = (
     <svg
       className={`h-5 w-5 rounded-full text-gray-${
-        theme === "dark" ? 300 : 400
+        resolvedTheme === "dark" ? 300 : 400
       } ${(styles as any).rippleAnimation}`}
       fill="none"
       viewBox="0 0 24 24"
@@ -71,13 +71,15 @@ const ThemeToggle = () => {
         {lightIcon}
         <div
           className={`w-12 h-5 flex items-center rounded-full mx-1 px-1 cursor-pointer ${
-            theme === "light" ? "bg-gray-300" : "bg-gray-700"
+            resolvedTheme === "light" ? "bg-gray-300" : "bg-gray-700"
           }`}
-          onClick={() => onThemeChanged(theme as string)}
+          onClick={() => onThemeChanged(resolvedTheme as string)}
         >
           <div
             className={`w-4 h-4 rounded-full shadow-md transform transition duration-300 ease ${
-              theme === "dark" ? "translate-x-6 bg-purple-400" : "bg-yellow-200"
+              resolvedTheme === "dark"
+                ? "translate-x-6 bg-purple-400"
+                : "bg-yellow-200"
             }`}
           ></div>
         </div>
